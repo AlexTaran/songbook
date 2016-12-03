@@ -1,0 +1,90 @@
+{
+  'name': 'Whiskey in the jar',
+  'stanzaskip': '4.5pt',
+  'fontsize': '10pt',
+  'fontskip': '10pt',
+  'stanzas': [{
+    'type': 'couplet',
+    'text': 'CAPO 2'
+  }, {
+    'type': 'couplet',
+    'text': '''
+   C                    Am                                 |
+As I was going over the far fam'd Kerry Mountains,
+  F                                C            G          |
+I met with Captain Farrel, and his money he was countin',
+  C                               Am                       |
+I first produced my pistol, and I than produced my rapier,
+         F                         C                       |
+Sayin': "Stand and deliver for you are a bold deceiver".
+    '''
+  }, {
+    'type': 'chorus',
+    'text': '''
+      G                       |
+Musha ring dum a doo dum a da,
+C                             |
+Whack for the daddy ol',
+F                             |
+Whack for the daddy ol',
+        C       G      C      |
+There's whiskey in the jar.
+    '''
+  }, {
+    'type': 'couplet',
+    'text': '''
+I counted out his money and it made a pretty penny,
+I put it in my pocket, and I took it home to Jenny,
+She sighed, and she swore that she never would deceive me,
+But the devil take the women for they never can be easy.
+    '''
+  }, {
+    'type': 'chorus',
+    'text': 'Chorus.'
+  }, {
+    'type': 'couplet',
+    'text': '''
+I went into my chamber all for to take a slumber,
+I dreamt of gold and jewels and for sure it was no wonder,
+But Jenny drew my charges and she filled them out with water,
+Then sent for Captain Farrel, to be ready for the slaughter.
+    '''
+  }, {
+    'type': 'chorus',
+    'text': 'Chorus.'
+  }, {
+    'type': 'couplet',
+    'text': '''
+'Twas early in the morning just before I rose to travel,
+Up comes a band of footmen and likewise, Captain Farrel,
+I first produced my pistol for she stole away my rapier,
+But I couldn't shoot the water, so a prisoner I was taken.
+    '''
+  }, {
+    'type': 'chorus',
+    'text': 'Chorus.'
+  }, {
+    'type': 'couplet',
+    'text': '''
+Now there's some take delight in the carriages a rolling
+and others take delight in the hurling and the bowling
+but I take delight in the juice of the barley
+and courting pretty fair maids in the morning bright and early
+    '''
+  }, {
+    'type': 'chorus',
+    'text': 'Chorus.'
+  }, {
+    'type': 'couplet',
+    'text': '''
+If anyone can aid me 'tis my brother in the army,
+If I can find his station, in Cork or in Killarney,
+And if he'll go with me we'll go roving in Kilkenny,
+And I'm sure he'll treat me better than my old a-sporting Jenny.
+    '''
+  }, {
+    'type': 'chorus',
+    'text': 'Chorus.'
+  }]
+}
+

@@ -1,0 +1,58 @@
+% Utility functions and macros
+
+% For verbatim env from TeXbook.
+\def\uncatcodespecials{\def\do##1{\catcode`##1=12}\dospecials}
+
+\long\def\verbatimworkaround#1{%
+\def\renderverbatim{{#1}}\renderverbatim\egroup}
+
+\def\myverbatim{\parindent=0pt\noindent%
+\bgroup\obeylines\verbatimworkaround%
+}
+
+\def\vskzr{\vskip 0pt plus 0pt minus 0pt{}}
+%\def\vskzr{}
+% Two-column aligner
+\long\def\doublealign#1#2{%
+\parindent=0pt\leftskip=0pt\rightskip=0pt\par\noindent%
+{\hbox to 0pt{\vtop{\vskzr#1}}}%
+\hbox{\leftskip=0pt plus 1fill\vtop{\vskzr#2}}%
+\par%
+}
+\long\def\doubleverb#1#2{%
+\parindent=0pt\leftskip=0pt\rightskip=0pt\par\noindent{\hbox to 0pt{\vtop{#1}}}%
+\hbox{\leftskip=0pt plus 1fill\vtop{#2}}%
+\par%
+}
+
+\newcommand{\songpage}[1]{
+  \subimport{songs/}{#1.tex}
+  \rfoot{\fontsize{12pt}{14pt}\fontspec{Helvetica}\hyperlink{contents}{Оглавление}}
+  \clearpage
+}
+
+\newcommand{\mycontentsline}[2]{
+\fontsize{12pt}{14pt}\fontspec{Helvetica}\hyperref[#2]{#1\dotfill}\pageref{#2}\par
+}
+
+\long\def\couplet#1{%
+\fontsize{12pt}{12pt}\fontspec{Courier New}%
+\parindent=0pt\leftskip=0pt\rightskip=0pt\par%
+#1%
+}
+
+\long\def\chorus#1{%
+\fontsize{12pt}{12pt}\fontspec{Courier New}%
+\parindent=0pt\leftskip=0pt\rightskip=0pt\par%
+#1%
+}
+
+\newcommand{\mysongtitle}[1]{
+\centerline{\fontsize{14pt}{16.8pt}\fontspec{Helvetica}#1}
+\par\vspace{8pt}
+}
+%\long\def\songtitle#1{%
+%\begin{center}%
+%\textbf{#1}%
+%\end{center}%
+%}

@@ -1,0 +1,80 @@
+\documentclass[10pt]{book}
+\usepackage[a5paper,left=2.5cm,right=2cm,top=1.5cm,bottom=2cm]{geometry}
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+\usepackage{fancyhdr}
+%\setlength{\headheight}{14.5pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{plain}
+
+\usepackage{xltxtra}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+
+\setromanfont{Times New Roman}
+\setsansfont{Trebuchet MS}
+\setmonofont{Courier New}
+%\usepackage[english,russian]{babel}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{import}
+\usepackage{listings}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\usepackage{cprotect}
+\usepackage{songs}
+%\usepackage[T1,T2A]{fontenc}
+\newfontfamily{\cyrillicfont}{Tahoma}
+\newfontfamily{\cyrillicfonttt}{Courier New}
+\newfontfamily{\cyrillicfontsf}{Arial}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+%\setsansfont{CMU Sans Serif}
+
+\subimport{../src/}{utils.tex}
+
+\hypersetup{
+    colorlinks=true, % make the links colored
+    linkcolor=blue, % color TOC links in blue
+    urlcolor=red, % color URLs in red
+    linktoc=all % 'all' will create links for everything in the TOC
+}
+
+\begin{document}
+%\lstset{inputencoding=utf8x, extendedchars=\true}
+%\newfontfamily{\russianfont}{Courier New}
+
+\subimport{../src/}{titlepage.tex}%
+\clearpage%
+
+\setcounter{page}{1}%
+\hypertarget{contents}{
+\fontsize{20pt}{24pt}\fontspec{Helvetica}\centerline{Оглавление по исполнителю}
+}\par\vspace{12pt}
+\subimport{../out/generated/}{contents_author.tex}%
+\clearpage%
+
+\fontsize{20pt}{24pt}\fontspec{Helvetica}\centerline{Оглавление по названию}
+\par\vspace{12pt}
+\subimport{../out/generated/}{contents_name.tex}%
+
+\clearpage%
+
+\subimport{../out/generated/}{songlist.tex}
+
+%{\fontsize{20pt}{24pt}\fontspec{Helvetica}\centerline{О сборнике}}
+%\par\vspace{12pt}
+%\subimport{../src/}{aboutpage.tex}%
+\subimport{../src/}{disclaimerpage.tex}%
+
+\end{document}
